@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>策略收益报表</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'SimSun', 'STSong', 'Microsoft YaHei', serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            padding: 50px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            padding: 40px 50px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            border: 1px solid #1e3a5f;
+        }
+        .header h1 {
+            color: #ffffff;
+            font-size: 26px;
+            font-weight: normal;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+        .header p {
+            color: rgba(255,255,255,0.85);
+            font-size: 14px;
+        }
+        .stock-card {
+            background: #ffffff;
+            padding: 35px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .stock-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #2c5282;
+        }
+        .stock-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1a365d;
+            letter-spacing: 1px;
+        }
+        .stats {
+            display: flex;
+            gap: 40px;
+        }
+        .stat-item {
+            text-align: center;
+            min-width: 90px;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #666666;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        .stat-value {
+            font-size: 17px;
+            font-weight: bold;
+            color: #333333;
+        }
+        .stat-value.positive {
+            color: #2563eb;
+        }
+        .stat-value.negative {
+            color: #dc2626;
+        }
+        .chart-container {
+            margin-bottom: 32px;
+        }
+        .chart-container:last-child {
+            margin-bottom: 0;
+        }
+        .chart-title {
+            font-size: 15px;
+            color: #1a365d;
+            margin-bottom: 18px;
+            font-weight: 600;
+            padding-left: 10px;
+            border-left: 4px solid #2563eb;
+        }
+        .chart-image {
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid #e5e7eb;
+        }
+        .footer {
+            text-align: center;
+            color: #666666;
+            font-size: 13px;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+        @media (max-width: 768px) {
+            .stock-header {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+            }
+            .stats {
+                gap: 25px;
+                flex-wrap: wrap;
+            }
+            .header {
+                padding: 25px 20px;
+            }
+            .header h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>策略收益报表</h1>
+            <p>生成时间: 2026年06月01日 18:10:00 | 分析数量: 1 只</p>
+        </div>
+
+        <div class="stock-card">
+            <div class="stock-header">
+                <div class="stock-name">有色金属</div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-label">总收益(元)</div>
+                        <div class="stat-value positive">965.78</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">策略收益(元)</div>
+                        <div class="stat-value">1,218.92</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">持仓收益(元)</div>
+                        <div class="stat-value">-253.14</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">收益率（总资金）</div>
+                        <div class="stat-value positive">0.69%</div>
+                    </div>
+                
+                    <div class="stat-item">
+                        <div class="stat-label">收益率（最大占用资金）</div>
+                        <div class="stat-value positive">2.66%</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">最大占用资金</div>
+                        <div class="stat-value">3.63</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <div class="chart-title">📊 策略收益分析</div>
+                <img src="有色金属_grid_profit.png" alt="策略收益图" class="chart-image">
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">📊 持仓收益分析</div>
+                <img src="有色金属_hold_profit.png" alt="收益率图" class="chart-image">
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">📈 收益率与股价走势</div>
+                <img src="有色金属_return_price.png" alt="收益率图" class="chart-image">
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">💰 资金占用分析</div>
+                <img src="有色金属_funds.png" alt="资金占用图" class="chart-image">
+            </div>
+            
+
+        </div>
+
+        <div class="footer">
+            <p>数据可能存在误差，发布者具有最终解释权</p>
+        </div>
+    </div>
+</body>
+</html>
