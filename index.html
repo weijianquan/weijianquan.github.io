@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>策略收益报表</title>
+    <title>组合策略收益报表</title>
     <style>
         * {
             margin: 0;
@@ -63,6 +63,7 @@
         .stats {
             display: flex;
             gap: 40px;
+            flex-wrap: wrap;
         }
         .stat-item {
             text-align: center;
@@ -120,7 +121,6 @@
             }
             .stats {
                 gap: 25px;
-                flex-wrap: wrap;
             }
             .header {
                 padding: 25px 20px;
@@ -134,65 +134,56 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>策略收益报表</h1>
-            <p>生成时间: 2026年06月11日 15:07:05 | 分析数量: 1 只</p>
+            <h1>组合策略收益报表</h1>
+            <p>生成时间: 2026年06月12日 15:18:24</p>
         </div>
-
         <div class="stock-card">
             <div class="stock-header">
-                <div class="stock-name">有色金属</div>
+                <div class="stock-name">投资组合</div>
                 <div class="stats">
                     <div class="stat-item">
                         <div class="stat-label">总收益(元)</div>
-                        <div class="stat-value negative">-599.22</div>
+                        <div class="stat-value negative">-358.95</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-label">策略收益(元)</div>
-                        <div class="stat-value">-599.22</div>
+                        <div class="stat-value">-358.95</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-label">持仓收益(元)</div>
-                        <div class="stat-value">0.00</div>
+                        <div class="stat-value">2,300.43</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-label">收益率（总资金）</div>
-                        <div class="stat-value negative">-0.43%</div>
+                        <div class="stat-value negative">-0.26%</div>
                     </div>
-                
                     <div class="stat-item">
                         <div class="stat-label">收益率（最大占用资金）</div>
-                        <div class="stat-value negative">-1.54%</div>
+                        <div class="stat-value negative">-0.92%</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-label">最大占用资金</div>
+                        <div class="stat-label">最大占用资金(万元)</div>
                         <div class="stat-value">3.89</div>
                     </div>
                 </div>
             </div>
-            
             <div class="chart-container">
-                <div class="chart-title">📊 策略收益分析</div>
-                <img src="有色金属_grid_profit.png" alt="策略收益图" class="chart-image">
+                <div class="chart-title"> 组合策略收益分析</div>
+                <img src="组合_grid_profit.png" alt="策略收益图" class="chart-image">
             </div>
-
             <div class="chart-container">
-                <div class="chart-title">📊 持仓收益分析</div>
-                <img src="有色金属_hold_profit.png" alt="收益率图" class="chart-image">
+                <div class="chart-title"> 组合持仓收益分析</div>
+                <img src="组合_hold_profit.png" alt="持仓收益图" class="chart-image">
             </div>
-
             <div class="chart-container">
-                <div class="chart-title">📈 收益率与股价走势</div>
-                <img src="有色金属_return_price.png" alt="收益率图" class="chart-image">
+                <div class="chart-title"> 组合累计总收益与收益率</div>
+                <img src="组合_total_return.png" alt="总收益图" class="chart-image">
             </div>
-
             <div class="chart-container">
-                <div class="chart-title">💰 资金占用分析</div>
-                <img src="有色金属_funds.png" alt="资金占用图" class="chart-image">
+                <div class="chart-title"> 组合资金占用分析</div>
+                <img src="组合_funds.png" alt="资金占用图" class="chart-image">
             </div>
-            
-
         </div>
-
         <div class="footer">
             <p>数据可能存在误差，发布者具有最终解释权</p>
         </div>
